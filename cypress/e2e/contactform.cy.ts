@@ -24,7 +24,7 @@ it('sends a message successfully', () => {
     cy.visit('/#/admin/')
 
     /**
-     * TODO: Find the username and password fields and provide it with the values admin and password
+     * TODO: Find the username and password fields and provide it with the values username and password
      * and click the submit button
      */
 
