@@ -12,6 +12,12 @@ it('sends a message successfully', () => {
          * TODO: Find the Contact form and provide it with the values given above
          * and click the submit button
          */
+        cy.get('[data-testid="ContactName"]').type(name);
+        cy.get('[data-testid="ContactEmail"]').type(email);
+        cy.get('[data-testid="ContactPhone"]').type(phone);
+        cy.get('[data-testid="ContactSubject"]').type(subject);
+        cy.get('[data-testid="ContactDescription"]').type(body);
+        cy.get('#submitContact').click();
     });
 
     // The form was submitted
@@ -28,6 +34,9 @@ it('sends a message successfully', () => {
      * TODO: Find the username and password fields and provide it with the values username and password
      * and click the submit button
      */
+    cy.get('[data-testid="username"]').type('admin');
+    cy.get('[data-testid="password"]').type('password');
+    cy.get('[data-testid="submit"]').click();
 
     cy.contains('.navbar', 'B&B Booking Management')
         .should('be.visible')
@@ -35,6 +44,7 @@ it('sends a message successfully', () => {
         .click();
 
     // TODO: Check if the hash of the url is /#/admin/messages
+    cy.location('hash').should('eq', '#/admin/messages');
 
     cy.get('.row.detail')
         .should('have.length.greaterThan', 0)
@@ -45,6 +55,11 @@ it('sends a message successfully', () => {
     // TODO: Between the should and contains, check if the the submitted information is present
     cy.contains('.message-modal', subject)
         .should('be.visible')
+        .and('include.text', name)
+        .and('include.text', phone)
+        .and('include.text', email)
+        .and('include.text', subject)
+        .and('include.text', body)
         .contains('button', 'Close')
         .click();
 
