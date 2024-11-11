@@ -5,14 +5,36 @@ This project contains automated tests for the website [Automation in Testing](ht
 ## Setup and run Cypress Tests
 
 1. **Install NodeJS, NPM and Cypress**
+    Open Command Prompt as Administrator: Right-click on the Start menu and select "Command Prompt (Admin)".
+    Check if you have node intalled:
+    ```bash
+    node -v
+    ```
+    
+    Check if you have npm installed:
+    ```bash
+    npm -v
+    ```
+    
+    If not then run the following commands to install Node.js and npm:
+    ```bash
+    winget install Node.js
+    ```
+    This command will download and install the latest version of Node.js and npm.
 
-2. **Open Cypress**:
+2. **Install project dependencies**:
+    Go to root directory of this test project and run the following command:
+    ```bash
+    npm install
+    ```
+
+3. **Open Cypress**:
     ```bash
     npx cypress open
     ```
    This command will open the Cypress Test Runner where you can see and run all the test files.
 
-3. **Run Tests from CLI**:
+4. **Run Tests from CLI**:
     ```bash
     npx cypress run
     ```
