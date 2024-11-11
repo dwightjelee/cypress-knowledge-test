@@ -2,10 +2,9 @@
 
 This project contains automated tests for the website [Automation in Testing](https://automationintesting.online/).
 
-## Running Cypress Tests
+## Setup and run Cypress Tests
 
-1. **Write tests**:
-   Open the test file `cypress/e2e/contactform.cy.ts` and finish the tests by fulfilling the TODO's found in the file.
+1. **Install NodeJS, NPM and Cypress**
 
 2. **Open Cypress**:
     ```bash
@@ -23,6 +22,15 @@ This project contains automated tests for the website [Automation in Testing](ht
 
 The test files are located in the `cypress/e2e` directory.
 
-### Fixing TODO Comments
+### Test 1: Fixing TODO Comments
 
+Open the test file `cypress/e2e/contactform.cy.ts` and finish the tests by fulfilling the TODO's found in the file.
 Ensure all TODO comments in the test files are resolved and the tests are functioning as expected. Follow the guidelines and best practices mentioned in the Cypress documentation for writing effective tests.
+
+### Test 2: Write booking test
+
+Create a new file called `room-managment.cy.ts` in the `cypress/e2e` directory and create tests to test the following:
+1. Login on the admin panel
+2. On the `Rooms` page create a new **family room** that is **accessible** and has **WiFi** and a **TV**
+3. After creating the room, click on the new record to change it's description and add an image (you can search for an image on Google).
+4. Go back to the homepage to see if the newly created room is visible and if all details that you've added are present.
